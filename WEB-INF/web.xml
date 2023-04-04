@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>ePaper</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+   <session-config>
+    <session-timeout>30</session-timeout>
+    <cookie-config>
+    	<name>PHPSESSID</name>
+    	<http-only>false</http-only>
+    	<secure>false</secure>
+    </cookie-config>
+  </session-config>
+  
+  <servlet>
+  	<servlet-name>Error</servlet-name>
+	<jsp-file>/admin/error.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Error</servlet-name>
+  	<url-pattern>/error</url-pattern>
+  </servlet-mapping>
+  
+  
+   <error-page>  
+  	<exception-type>java.lang.Exception</exception-type>  
+  	<location>/error</location>  
+  </error-page>  
+  
+  <error-page>
+	<error-code>301</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>302</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>303</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>304</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>305</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>306</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>307</error-code>
+   	<location>/error</location>
+</error-page>
+  
+   <error-page>
+   	<error-code>404</error-code>
+   	<location>/error</location>
+   </error-page>
+   
+   <error-page>
+	<error-code>401</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>402</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>403</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>404</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>405</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>406</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>407</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>408</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>409</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>410</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>411</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>412</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>413</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>414</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>415</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>417</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>500</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>501</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>502</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>503</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>504</error-code>
+   	<location>/error</location>
+</error-page>
+
+<error-page>
+	<error-code>505</error-code>
+   	<location>/error</location>
+</error-page>
+   
+   <error-page>
+   	<exception-type>java.lang.Throwable</exception-type>
+   	<location>/error</location>
+   </error-page>
+  
+  <servlet>
+  	<servlet-name>index</servlet-name>
+  	<jsp-file>/index.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>index</servlet-name>
+  	<url-pattern>/lg/home</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>about</servlet-name>
+  	<jsp-file>/aboutus.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>about</servlet-name>
+  	<url-pattern>/lg/about</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>careers</servlet-name>
+  	<jsp-file>/career.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>careers</servlet-name>
+  	<url-pattern>/lg/career</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>pricing</servlet-name>
+  	<jsp-file>/pricing.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>pricing</servlet-name>
+  	<url-pattern>/lg/price</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>contact</servlet-name>
+  	<jsp-file>/contact.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>contact</servlet-name>
+  	<url-pattern>/lg/contact</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>login</servlet-name>
+  	<jsp-file>/admin/login.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>login</servlet-name>
+  	<url-pattern>/adm/en/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>terms</servlet-name>
+  	<jsp-file>/admin/terms.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>terms</servlet-name>
+  	<url-pattern>/adm/en/terms</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>privacy</servlet-name>
+  	<jsp-file>/privacy.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>privacy</servlet-name>
+  	<url-pattern>/adm/en/privacy</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>register</servlet-name>
+  	<jsp-file>/admin/register.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>register</servlet-name>
+  	<url-pattern>/adm/en/register</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>forgotpassword</servlet-name>
+  	<jsp-file>/admin/forgotpassword.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>forgotpassword</servlet-name>
+  	<url-pattern>/adm/en/forgot-password</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>admdash</servlet-name>
+  	<jsp-file>/admin/dashboard.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>admdash</servlet-name>
+  	<url-pattern>/adm/en/dashboard/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>clidash</servlet-name>
+  	<jsp-file>/admin/client_dashboard.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>clidash</servlet-name>
+  	<url-pattern>/adm/cl/dashboard/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>clmember</servlet-name>
+  	<jsp-file>/admin/member.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>clmember</servlet-name>
+  	<url-pattern>/adm/cl/member/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>clstorage</servlet-name>
+  	<jsp-file>/admin/storage.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>clstorage</servlet-name>
+  	<url-pattern>/adm/cl/storage/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>clupload</servlet-name>
+  	<jsp-file>/admin/uploadfile.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>clupload</servlet-name>
+  	<url-pattern>/adm/cl/upload/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>clfileinfo</servlet-name>
+  	<jsp-file>/admin/fileinfo.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>clfileinfo</servlet-name>
+  	<url-pattern>/adm/cl/info/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>clchgpwd</servlet-name>
+  	<jsp-file>/admin/change_password.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>clchgpwd</servlet-name>
+  	<url-pattern>/adm/cl/cngpwd/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>enchgpwd</servlet-name>
+  	<jsp-file>/admin/change_password.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>enchgpwd</servlet-name>
+  	<url-pattern>/adm/en/cngpwd/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>cllink</servlet-name>
+  	<jsp-file>/admin/shareablelink.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cllink</servlet-name>
+  	<url-pattern>/fg/uvv/ws/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>ennewsletter</servlet-name>
+  	<jsp-file>/admin/newsletter.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ennewsletter</servlet-name>
+  	<url-pattern>/adm/en/newsletter</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>encontact</servlet-name>
+  	<jsp-file>/admin/admcontact.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>encontact</servlet-name>
+  	<url-pattern>/adm/en/contact</url-pattern>
+  </servlet-mapping>
+  
+   
+  <servlet>
+  	<servlet-name>enrequest</servlet-name>
+  	<jsp-file>/admin/request.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>enrequest</servlet-name>
+  	<url-pattern>/adm/en/request</url-pattern>
+  </servlet-mapping>
+  
+     
+  <servlet>
+  	<servlet-name>clrequest</servlet-name>
+  	<jsp-file>/admin/storagerequest.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>clrequest</servlet-name>
+  	<url-pattern>/adm/cl/storagerequest/*</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>cltrans</servlet-name>
+  	<jsp-file>/admin/process.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cltrans</servlet-name>
+  	<url-pattern>/adm/cl/process/*</url-pattern>
+  </servlet-mapping>
+  
+  	
+	
+	<filter>
+		<filter-name>extFilter</filter-name>
+		<filter-class>com.linus.servlets.ExtensionFilter</filter-class>	
+	</filter>
+	<filter-mapping>
+	   <filter-name>extFilter</filter-name>
+	   <url-pattern>/*</url-pattern>
+	</filter-mapping>
+  
+</web-app>

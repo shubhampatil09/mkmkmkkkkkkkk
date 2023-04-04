@@ -1,0 +1,55 @@
+
+
+
+/* if the viewport is equal to 340px or less than that */ 
+@media only screen and (max-width: 340px){
+    .banner-img{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+/* if the viewport is equal to 340px or less than that */ 
+@media only screen and (max-width: 792px){
+    .banner-img{
+        width: auto;
+        height: 300px;
+    }
+
+    .banner-content h4{
+        font-size: 28px;
+        position: relative;
+        right: 5px;
+        top: 10px;
+    }
+
+    .banner-content h5{
+        font-size: 28px;
+        position: relative;
+        right: 5px;
+        top: 10px;
+    }
+
+    .spec-card{
+        width: 375px;
+    }
+    .share1-img{
+        width: 100px;
+        object-fit: cover;
+        height: 350px;
+        border-radius: 30px;
+    }
+
+    .supported-img{
+        width: 375px;
+    }
+    
+}
+
+
+
+/* if the viewport is equal to 1910px or less than that */ 
+@media only screen and (max-width: 1910px){
+   
+}

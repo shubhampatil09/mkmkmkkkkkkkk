@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		.row {
+			display: flex;
+		}
+		.cell {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			font-size: 60px;
+			cursor: pointer;
+			user-select: none;
+		}
+		.cell:hover {
+			background-color: lightgray;
+		}
+		.cell.disabled {
+			cursor: default;
+			background-color: gray;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+		</div>
+		<div class="row">
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+		</div>
+		<div class="row">
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+		</div>
+	</div>
+
+	<script>
+		const cells = document.querySelectorAll('.cell');
+		let currentPlayer = 'X';
+		let winner = null;
+		let isGameOver = false;
+
+		function handleCellClick(e) {
+			const cell = e.target;
+			if (cell.classList.contains('disabled') || isGameOver) {
+				return;
+			}
+
+			cell.textContent = currentPlayer;
+			cell.classList.add('disabled');
+
+			if (checkWin()) {
+				winner = currentPlayer;
+				isGameOver = true;
+				alert(`${winner} wins!`);
+				return;
+			}
+
+			if (checkTie()) {
+				isGameOver = true;
+				alert(`Tie game!`);
+				return;
+			}
+
+			currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+		}
+
+		function checkWin() {
+			const winningCombos = [
+				[0, 1, 2],
+				[3, 4, 5],
+				[6, 7, 8],
+				[0, 3, 6],
+				[1, 4, 7],
+				[2, 5, 8],
+				[0, 4, 8],
+				[2, 4, 6]
+			];
+
+			return winningCombos.some(combo => {
+				return combo.every(index => {
+					return cells[index].classList.contains('disabled') && cells[index].textContent === currentPlayer;
+				});
+			});
+		}
+
+		function checkTie() {
+			return [...cells].every(cell => {
+				return cell.classList.contains('disabled');
+			});
+		}
+
+		cells.forEach(cell => {
+			cell.addEventListener('click', handleCellClick);
+		});
+	</script>
+</body>
+</html>

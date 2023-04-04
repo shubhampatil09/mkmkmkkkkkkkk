@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read Local File</title>
+  </head>
+  <body>
+    <h1>Read Local File</h1>
+    <input type="file" id="fileInput">
+    <pre id="fileContents"></pre>
+
+    <script>
+      const fileInput = document.getElementById('fileInput');
+      const fileDisplay = document.getElementById('fileContents');
+
+      fileInput.addEventListener('change', function(e) {
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+          fileDisplay.textContent = reader.result;
+        }
+
+        reader.readAsText(file);
+      });
+    </script>
+  </body>
+</html>
+
